@@ -104,13 +104,13 @@ public class SecurityConfig {
                     .requestMatchers("/",
                         "/error",
                         "/favicon.ico",
-                        "/**/*.png",
-                        "/**/*.gif",
-                        "/**/*.svg",
-                        "/**/*.jpg",
-                        "/**/*.html",
-                        "/**/*.css",
-                        "/**/*.js")
+                        "/**.png",
+                        "/**.gif",
+                        "/**.svg",
+                        "/**.jpg",
+                        "/**.html",
+                        "/**.css",
+                        "/**.js")
                         .permitAll()
                     .requestMatchers("/auth/**", "/oauth2/**")
                         .permitAll()
