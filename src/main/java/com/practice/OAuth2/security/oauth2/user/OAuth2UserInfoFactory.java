@@ -60,7 +60,7 @@ public class OAuth2UserInfoFactory {
     public static OAuth2UserInfo makeNaverUserInfo(Map<String, Object> attributes){
         Map<String, Object> naverUserInfo = new HashMap<>();
         LinkedHashMap<String, Object> temporaryProperties = (LinkedHashMap<String, Object>) attributes.get("response");
-        naverUserInfo.put("id", String.valueOf(attributes.get("id")));
+        naverUserInfo.put("id", String.valueOf(temporaryProperties.get("id")));
         naverUserInfo.put("nickname", temporaryProperties.get("nickname"));
         naverUserInfo.put("picture", temporaryProperties.get("profile_image"));
         naverUserInfo.put("email", temporaryProperties.get("email"));
